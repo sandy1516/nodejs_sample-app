@@ -1,2 +1,2 @@
 # sample-app
-controler and services in nodejs
+A sample express app with controllers and services abstraction using mongodb and mongoose

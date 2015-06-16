@@ -6,7 +6,7 @@
  * @author      ritesh
  * @version     1.0
  */
-console.log('hi');
+ 
 var express = require('express'),
   app = express(),
   bodyParser = require('body-parser'),
@@ -14,13 +14,16 @@ var express = require('express'),
   // config = require('config'), 
   errorHandler = require('./middlewares/ErrorHandler'),
   responser = require('./middlewares/responser');
- 
+
 var port = 4040;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
 app.use(router());
+
 app.use(responser());
+
 app.use(errorHandler());
 app.listen(port);
 console.log('Application listening on port ' + port);

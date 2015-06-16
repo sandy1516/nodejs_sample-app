@@ -7,6 +7,10 @@ var UserSchema = require('../models/User').UserSchema,
 
 exports.register = function(entity, callback) {
   User.create(entity, callback);
-  /*console.log(entity);
-  callback(entity);*/
+  // console.log(entity);
+  // callback(entity);
+};
+
+exports.login = function(entity, callback){
+ User.findOne(entity, callback);
 };
